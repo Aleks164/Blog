@@ -1,19 +1,33 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const { template } = require('lodash');
 const { resolve } = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
 const glob = require("glob");
 
 const pages = glob.sync("pages/*.html");
 
+let multipleHtmlPlugins = pages.map(name => {
+    let el = name.match(/(\w+)(?=\.html)/mi);
+    return new HtmlWebpackPlugin({
+        template: `./${name}`, // relative path to the HTML files
+        filename: `${name}`, // output HTML files
+        chunks: [`${el[0]}`] // respective JS files
+    })
+});
+
 const NODE_ENV = process.env.NODE_ENV;
 
-
+// ___________________
 module.exports = {
     entry: {
-        main: resolve(__dirname, './src/main.js'),
-
+        index: resolve(__dirname, './src/index.js'),
+        index_flex: resolve(__dirname, './src/index_flex.js'),
+        index_grid: resolve(__dirname, './src/index_grid.js'),
+        index_inline_block: resolve(__dirname, './src/index_inline_block.js'),
+        leo: resolve(__dirname, './src/leo.js'),
     },
     output: {
         filename: '[name].js',
@@ -38,33 +52,40 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
             },
-            // {
-            //     test: /\.(png)$/i,
-            //     type: 'asset/resource',
-            //     generator: {
-            //         filename: `./images/[contenthash][ext]`,
-            //     },
-            // },
-            // {
-            //     test: /\.html$/i,
-            //     loader: "html-loader",
-            // },
+            {
+                test: /\.(png|jpeg|jpg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: `./images/[contenthash][ext]`,
+                },
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
         ],
     },
 
     mode: NODE_ENV === "production" ? "production" : "development",
     plugins: [
-        ...pages.map(
-            (el) =>
-                new HtmlWebpackPlugin({
-                    filename: el.replace(/^pages\//, ""),
-                    template: el,
-                })
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            chunks: ['index'],
+        }),
+        new MiniCssExtractPlugin(),
+        new BrowserSyncPlugin(
+            {
+                host: 'localhost',
+                port: 3000,
+                proxy: 'http://localhost:9000/'
+            },
+            {
+                reload: false
+            }
         ),
-        new MiniCssExtractPlugin()
-    ],
+    ].concat(multipleHtmlPlugins),
     optimization: {
         minimizer: [
             `...`,
