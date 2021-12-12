@@ -1,24 +1,22 @@
 import makeLayout from "./leoLayout";
-import "./leo.css";
+import "./cssStyles/leo.css";
 
 makeLayout();
 
-var aqq = document.getElementById('maindiv');
+const aqq = document.getElementById('maindiv');
 function shuffle(array) {
-	array.sort(function () {
-		return Math.random() - 0.5;
-	});
+	array.sort(() => Math.random() - 0.5);
 }
-var wow = aqq.getElementsByClassName("buttons");
-var aramAray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let wow = aqq.getElementsByClassName("buttons");
+const aramAray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 shuffle(aramAray);
-var aramColor = ["coral", "blue", 'yellow', 'green', 'grey', 'AntiqueWhite', "coral", "blue", 'yellow', 'green', 'grey', 'AntiqueWhite'];
+const aramColor = ["coral", "blue", 'yellow', 'green', 'grey', 'AntiqueWhite', "coral", "blue", 'yellow', 'green', 'grey', 'AntiqueWhite'];
 shuffle(aramColor);
 
 wow = [...wow];
 
 
-wow.forEach(function (item) {
+wow.forEach((item) => {
 
 	item.style.backgroundColor = (aramColor[wow.indexOf(item)]);
 	item.style.transition = "all 1s";
@@ -30,10 +28,10 @@ wow.forEach(function (item) {
 console.log(wow);
 
 
-var firsttry, secondtry, we;
-var firstbtn, secondbtn, aramanim;
-var louder = false;
-aramanim = ["animate__fadeOutUp", "animate__fadeOutTopLeft", "animate__fadeOutTopRight", "animate__fadeOutBottomRight", "animate__fadeOutBottomLeft"];
+let firsttry; let secondtry;
+let firstbtn; let secondbtn;
+let louder = false;
+const aramanim = ["animate__fadeOutUp", "animate__fadeOutTopLeft", "animate__fadeOutTopRight", "animate__fadeOutBottomRight", "animate__fadeOutBottomLeft"];
 
 function q(button) {
 	if (!louder) {
@@ -86,7 +84,7 @@ function start() {
 		shuffle(aramColor);
 
 
-		wow.forEach(function (item) {
+		wow.forEach((item) => {
 			item.classList.remove("a1", "a2", "a3", "a4", "a5", "a6", "a1", "a2", "a3", "a4", "a5", "a6");
 			item.classList.remove("temp1");
 			item.style.display = "inline-block";
@@ -95,39 +93,12 @@ function start() {
 			item.onclick = function () { q(this) };
 		});
 
-		wow.forEach(function (item) {
+		wow.forEach((item) => {
 			item.style.backgroundColor = (aramColor[wow.indexOf(item)]);
 			item.style.transition = "all 1s";
 			setTimeout(() => {
 				item.classList.add("temp1");
 				item.style.transition = "";
-				louder = false;
-			}, 3000);
-		});
-	}
-}
-function dino() {
-
-	if (!louder) {
-		louder = true;
-		var aramColor = ["a1", "a2", "a3", "a4", "a5", "a6", "a1", "a2", "a3", "a4", "a5", "a6"];
-		shuffle(aramAray);
-		shuffle(aramColor);
-		wow.forEach(function (item) {
-			item.classList.remove("temp1");
-			item.classList.remove("a1", "a2", "a3", "a4", "a5", "a6", "a1", "a2", "a3", "a4", "a5", "a6");
-			item.classList.remove("animate__fadeOutUp", "animate__fadeOutTopLeft", "animate__fadeOutTopRight", "animate__fadeOutBottomRight", "animate__fadeOutBottomLeft");
-			item.style.display = "inline-block";
-			item.style.visibility = "visible";
-			item.onclick = function () { dinoq(this) };
-		});
-		wow.forEach(function (item) {
-			item.classList.add(aramColor[wow.indexOf(item)]);
-			item.style.transition = "all 2.5s";
-			setTimeout(() => {
-				item.style.transition = "";
-				// item.style.display = "none";
-				item.classList.add("temp1");
 				louder = false;
 			}, 3000);
 		});
@@ -180,7 +151,35 @@ function dinoq(button) {
 
 		}
 	}
+};
+function dino() {
+
+	if (!louder) {
+		louder = true;
+		const aramColor2 = ["a1", "a2", "a3", "a4", "a5", "a6", "a1", "a2", "a3", "a4", "a5", "a6"];
+		shuffle(aramAray);
+		shuffle(aramColor2);
+		wow.forEach((item) => {
+			item.classList.remove("temp1");
+			item.classList.remove("a1", "a2", "a3", "a4", "a5", "a6", "a1", "a2", "a3", "a4", "a5", "a6");
+			item.classList.remove("animate__fadeOutUp", "animate__fadeOutTopLeft", "animate__fadeOutTopRight", "animate__fadeOutBottomRight", "animate__fadeOutBottomLeft");
+			item.style.display = "inline-block";
+			item.style.visibility = "visible";
+			item.onclick = function () { dinoq(this) };
+		});
+		wow.forEach((item) => {
+			item.classList.add(aramColor2[wow.indexOf(item)]);
+			item.style.transition = "all 2.5s";
+			setTimeout(() => {
+				item.style.transition = "";
+				// item.style.display = "none";
+				item.classList.add("temp1");
+				louder = false;
+			}, 3000);
+		});
+	}
 }
+
 window.q = q;
 window.dino = dino;
 window.start = start;

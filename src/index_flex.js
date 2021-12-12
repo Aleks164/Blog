@@ -1,5 +1,5 @@
 import makeLayout from "./htmlLayout";
-import "./styles_flex.css";
+import "./cssStyles/styles_flex.css";
 
 
 const nav = `<a href="./index_grid.html"><span>GRID</span></a>

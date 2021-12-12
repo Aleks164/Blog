@@ -1,5 +1,5 @@
 import makeLayout from "./htmlLayout";
-import "./styles_grid.css";
+import "./cssStyles/styles_grid.css";
 
 
 const nav = `<a href="./index_grid.html"><span>GRID</span></a>
