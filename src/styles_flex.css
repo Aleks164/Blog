@@ -110,6 +110,12 @@ border: 1px solid grey;
 border-radius: 5px;
 background-color: blanchedalmond;
 }
+nav span:hover {  
+background-color: rgb(240, 178, 80);
+}
+nav a{
+  text-decoration: none;
+}
 main {
   order: 2;
   display: flex;

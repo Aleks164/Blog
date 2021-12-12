@@ -14,7 +14,7 @@ let multipleHtmlPlugins = pages.map(name => {
     return new HtmlWebpackPlugin({
         template: `./${name}`, // relative path to the HTML files
         filename: `${name}`, // output HTML files
-        chunks: [`${el[0]}`] // respective JS files
+        chunks: [`${el[0]}`], // respective JS files
     })
 });
 
@@ -72,7 +72,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",
-            chunks: ['index'],
+            chunks: ['index', "htmlLayout"],
         }),
         new MiniCssExtractPlugin(),
         new BrowserSyncPlugin(

@@ -22,12 +22,12 @@ main {
 }
 footer {
   background-color: rgb(255, 204, 153, 0.3);
-  grid-area: footer;
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-auto-flow: row;
   margin-left: 1vw;
 margin-right: 1vw;
+margin-top: 1vw;
 }
 footer p {
   text-align: justify;
@@ -46,9 +46,9 @@ padding-right: 3.5vw;
 }
 #container {
   display: grid;
-  grid-template-rows: 25vw 104vw 23vw;
+  grid-template-rows: 25vw 104vw;
   gap: 1vw;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "header" "main";
 }
 #img {
   grid-area: img;
@@ -139,6 +139,12 @@ nav span {
 nav span:nth-child(1) {
   margin-top: 6%;
 }
+nav span:hover {  
+  background-color: rgb(240, 178, 80);
+  }
+  nav a{
+    text-decoration: none;
+  }
 
 #leftblock,
 #midblock,

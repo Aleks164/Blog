@@ -81,6 +81,9 @@ nav {
   margin: 5px;
   margin-top: 0px;
   }
+  nav a{
+    text-decoration: none;
+  }
 #img {
   height: 190px;
   width: 385px;
@@ -104,6 +107,9 @@ nav span {
 
   background-color: blanchedalmond;
 }
+nav span:hover {  
+  background-color: rgb(240, 178, 80);
+  }
 main {
   display: block;
   height: 1030px;

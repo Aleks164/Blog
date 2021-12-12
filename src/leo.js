@@ -1,17 +1,25 @@
+import makeLayout from "./leoLayout";
 import "./leo.css";
+
+makeLayout();
 
 var aqq = document.getElementById('maindiv');
 function shuffle(array) {
-	array.sort(() => Math.random() - 0.5);
+	array.sort(function () {
+		return Math.random() - 0.5;
+	});
 }
 var wow = aqq.getElementsByClassName("buttons");
 var aramAray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 shuffle(aramAray);
 var aramColor = ["coral", "blue", 'yellow', 'green', 'grey', 'AntiqueWhite', "coral", "blue", 'yellow', 'green', 'grey', 'AntiqueWhite'];
 shuffle(aramColor);
+
 wow = [...wow];
 
+
 wow.forEach(function (item) {
+
 	item.style.backgroundColor = (aramColor[wow.indexOf(item)]);
 	item.style.transition = "all 1s";
 	setTimeout(() => {
@@ -19,6 +27,8 @@ wow.forEach(function (item) {
 		item.style.transition = "";
 	}, 2458);
 });
+console.log(wow);
+
 
 var firsttry, secondtry, we;
 var firstbtn, secondbtn, aramanim;
@@ -116,6 +126,7 @@ function dino() {
 			item.style.transition = "all 2.5s";
 			setTimeout(() => {
 				item.style.transition = "";
+				// item.style.display = "none";
 				item.classList.add("temp1");
 				louder = false;
 			}, 3000);
@@ -136,6 +147,8 @@ function dinoq(button) {
 			if (firsttry[1] === secondtry[1] && !(firstbtn === secondbtn)) {
 				firstbtn.classList.add(aramanim[1]);
 				secondbtn.classList.add(aramanim[2]);
+				console.log(aramanim[1]);
+				console.log(aramanim[2]);
 				firsttry = "";
 				secondtry = "";
 				louder = true;
@@ -159,10 +172,15 @@ function dinoq(button) {
 			}
 		}
 		else {
+
 			firsttry = [...button.classList];
 			button.classList.remove("temp1");
 			firstbtn = button;
+
+
 		}
 	}
 }
-
+window.q = q;
+window.dino = dino;
+window.start = start;
