@@ -26,8 +26,7 @@ module.exports = {
         "no-useless-escape": "warn",
         "no-param-reassign": "warn",
         "import/extensions": "warn",
-
-        // "import/prefer-default-export": "off",
+        "import/prefer-default-export": "off",
     },
     plugins: ["jest"],
 };
