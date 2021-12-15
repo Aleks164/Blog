@@ -34,15 +34,15 @@ describe("draw color mode", () => {
   it("it is should to create a layout in html with the correct number of elements and the required parameters inside and change them in 3 seconds", async () => {
     makeLayout(el);
 
-    let listOfColorElementsHTML = el.getElementsByClassName("buttons");
-    let listOfColorElements = [...listOfColorElementsHTML];
+    const listOfColorElementsHTML = el.getElementsByClassName("buttons");
+    const listOfColorElements = [...listOfColorElementsHTML];
     const spy = jest.spyOn(aram, "shuffle");
 
     spy.mockReturnValueOnce(aramColor);
 
     startF(aramColor, listOfColorElements);
 
-    let aramNumberOfElem = Math.round(
+    const aramNumberOfElem = Math.round(
       Math.random() * listOfColorElements.length
     );
     let aramString = listOfColorElementsHTML[aramNumberOfElem];
