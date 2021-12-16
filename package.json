@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "build": "webpack build --node-env production",
     "dev": "webpack serve --open",
-    "start": "webpack serve --mode development"
+    "start": "webpack serve --mode development",
+    "v": "node -v"
   },
   "repository": {
     "type": "git",
