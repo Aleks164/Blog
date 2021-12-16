@@ -34,7 +34,7 @@ describe("leo.test", () => {
             expect(image).toMatchImageSnapshot(
                 process.env.CI
                     ? {
-                        failureThreshold: 0.1,
+                        failureThreshold: 0.5,
                         failureThresholdType: "percent",
                     }
                     : undefined
