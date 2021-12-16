@@ -12,9 +12,7 @@ jobs:
       - name: Install Packages
         run: |
           npm install
-      - name: Lint check
-       with:
-          node-version: 14
+      - name: Lint check       
         run: |
           npm run lint
           
