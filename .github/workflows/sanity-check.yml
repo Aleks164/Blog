@@ -21,7 +21,6 @@ jobs:
           # https://www.maketecheasier.com/run-bash-commands-background-linux/
           npm start &>/dev/null &
           npm run test 
-          npm run v
 
       - name: Archive artifacts for style tests
         uses: actions/upload-artifact@v2
