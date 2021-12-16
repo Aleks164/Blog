@@ -31,7 +31,7 @@ describe("styles.test", () => {
             const image = await page.screenshot();
             await browser.close();
 
-            expect(image).toMatchImageSnapshot();
+            // expect(image).toMatchImageSnapshot();
             expect(image).toMatchImageSnapshot(
                 process.env.CI
                     ? {
