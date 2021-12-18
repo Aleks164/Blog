@@ -1,0 +1,96 @@
+
+.carusel{
+	border: 11px solid transparent;
+  background-blend-mode: color; 
+  border-image: url("../images/border2.png") 30 repeat;
+    position: relative;
+    
+    height: 320px;
+    width: 675px;
+}
+.slide{
+  position: absolute;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 5%;
+    height: 25%;
+    color: rgb(64 47 47);;
+    text-align: center;
+    opacity: .5;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 600%;
+    font-weight: bold;
+    cursor: pointer;
+}
+.prev{
+left: 20px;
+}
+.prev:hover, .next:hover{
+  font-weight: bold;
+color: rgb(201 231 101);
+
+}
+.next{
+	right:  20px;
+}
+
+.carusel > img {
+  display: none;
+  height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slidebut{  
+  cursor: pointer;
+  left: 84%;
+  position: absolute;
+  top: 2%;
+  margin: 0 auto;
+  display: block;
+  line-height: 50px;
+  height: 50px;
+  width: 15%;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  background: #5D8EC7;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slidebut:hover{
+  transform: translateX(10px);
+  background: #222;
+}
+#spanCont{
+  cursor: pointer;
+    left: 15%;
+    position: absolute;
+    top: 90%;
+    display: block;
+    height: 6%;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.item{
+  background-color: #72b2eb99;
+}
+.item:hover{
+  background-color: #f3d59d99;
+}

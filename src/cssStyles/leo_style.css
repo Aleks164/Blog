@@ -31,7 +31,7 @@ body {
   /* transition: all 2s; */
   display: inline-block;
   margin: 15px;
-  border: 10px solid transparent;
+  border: 8px solid transparent;
   border-image: url("../images/border2.png") 30 repeat;
   z-index: 50;
 }
