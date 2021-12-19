@@ -4,7 +4,7 @@
   background-blend-mode: color; 
   border-image: url("../images/border2.png") 30 repeat;
     position: relative;
-    
+    display: inline-block;
     height: 320px;
     width: 675px;
 }

@@ -1,0 +1,40 @@
+html {
+  width: 1050px;
+}
+
+body {
+  background-color: #f4e1d2;
+}
+
+.titleleo {
+  display: block;
+  width: 1000px;
+  height: 150px;
+}
+
+.title {
+  text-align: left;
+    font-family: Papyrus, sans-serif;
+    color: orange;
+    display: block;
+    margin: 1px;
+    padding-left: 15px;
+    font-size: 100px;
+}
+
+#hr1 {
+  float: left;
+  height: 4px;
+  background-color: orange;
+  border-width: 0;
+  width: 1050px;
+}
+
+.hrd1 {
+  display: block;
+  float: left;
+  margin: 4px;
+  width: 1050px;
+}
+
+

@@ -2,6 +2,12 @@
   function createCarusel() {
 
     let el = document.querySelector(".carusel");
+    if (typeof Number(el.dataset.width) === "number") {
+      el.style.width = el.dataset.width + "px";
+    }
+    if (typeof Number(el.dataset.height) === "number") {
+      el.style.width = el.dataset.height + "px";
+    }
     let line = el.dataset.showSliderLine;
     let slideShow = el.dataset.buttonSliderShow;
     let prevNext = el.dataset.prevNext;
@@ -59,34 +65,58 @@
       slide.addEventListener("click", SlideShow);
       el.appendChild(slide);
     }
-    document.querySelectorAll(".item")[i].style.backgroundColor = "#ffffff82";
+    document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
     imgList[i].style.display = "block";
     el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
 
     function nextB() {
       if (i + 1 > imgList.length - 1) {
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
+        };
         imgList[i].style.display = "none";
         i = 0;
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
+        };
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
       }
       else {
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
+        };
         imgList[i].style.display = "none";
         i++;
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
+        };
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
       }
     }
     function prevB() {
       if (i - 1 < 0) {
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
+        };
         imgList[i].style.display = "none";
         i = imgList.length - 1;
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
+        };
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
       }
       else {
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
+        };
         imgList[i].style.display = "none";
         i--;
+        if (line === "on") {
+          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
+        };
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
       }
