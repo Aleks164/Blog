@@ -93,9 +93,11 @@ color: rgb(201 231 101);
 
 .item{
   cursor: pointer;
-  background-color: #adc5db5c;
-  margin-left: 1px;
+    background-color: #adc5db5c;
+    margin-left: 1px;
     margin-right: 1px;
+    border: 1px solid #ffffff82;
+    
 }
 .item:hover{
   background-color: #f3d59d99;
