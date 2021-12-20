@@ -5,8 +5,7 @@
   border-image: url("../images/border2.png") 30 repeat;
     position: relative;
     display: inline-block;
-    height: 320px;
-    width: 675px;
+    
 }
 .slide{
   position: absolute;
@@ -45,8 +44,9 @@ color: rgb(201 231 101);
     margin-right: auto;
 }
 .slidebut{  
+  font-size: 20px;
   cursor: pointer;
-  left: 84%;
+  left: 83%;
   position: absolute;
   top: 2%;
   margin: 0 auto;
@@ -64,10 +64,13 @@ color: rgb(201 231 101);
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  border: 4px rgb(211, 118, 118);
+  border-style: inset;
 }
 .slidebut:hover{
   transform: translateX(10px);
-  background: #222;
+  background: rgb(28, 29, 136);
+  color: azure;
 }
 #spanCont{
   display: flex;
@@ -101,4 +104,9 @@ color: rgb(201 231 101);
 }
 .item:hover{
   background-color: #f3d59d99;
+}
+
+.border{
+  border: 4px rgb(166, 231, 46);
+  border-style: inset;
 }

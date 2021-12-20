@@ -1,12 +1,17 @@
+import "../cssStyles/dino_image_style.css";
+import "./carusel_style.css";
+
 (function () {
   function createCarusel() {
 
     let el = document.querySelector(".carusel");
     if (typeof Number(el.dataset.width) === "number") {
       el.style.width = el.dataset.width + "px";
+      console.log(el.style.width, "kk", el.dataset.width)
     }
     if (typeof Number(el.dataset.height) === "number") {
-      el.style.width = el.dataset.height + "px";
+      el.style.height = el.dataset.height + "px";
+      console.log(el.style.height, "kk", el.dataset.height)
     }
     let line = el.dataset.showSliderLine;
     let slideShow = el.dataset.buttonSliderShow;
@@ -14,6 +19,7 @@
     let imgList = el.querySelectorAll("img");
     let arr = [];
     let i = 0;
+    let intervalID;
     imgList.forEach((elem) => {
       arr.push(elem.outerHTML);
     });
@@ -61,8 +67,21 @@
     if (slideShow === "on") {
       let slide = document.createElement("span");
       slide.classList.add("slidebut");
-      slide.innerHTML = "SlideShow";
-      slide.addEventListener("click", SlideShow);
+
+      slide.innerHTML = "SlideShow OFF";
+      slide.addEventListener("click", () => {
+        slide.classList.toggle("border");
+
+        if (!intervalID) {
+          slide.innerHTML = "SlideShow ON";
+          intervalID = setInterval(nextB, 2000);
+        }
+        else {
+          slide.innerText = "SlideShow OFF";
+          clearInterval(intervalID);
+          intervalID = null;
+        }
+      });
       el.appendChild(slide);
     }
     document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
@@ -121,16 +140,7 @@
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
       }
     }
-    let intervalID;
-    function SlideShow() {
-      if (!intervalID) {
-        intervalID = setInterval(nextB, 2000);
-      }
-      else {
-        clearInterval(intervalID);
-        intervalID = null;
-      }
-    }
+
   }
 
   window.addEventListener("load", createCarusel);

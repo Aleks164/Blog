@@ -3,13 +3,25 @@ html {
 }
 
 body {
-  background-color: #f4e1d2;
+  background-color: #fefbd8;
 }
 
 .titleleo {
   display: block;
   width: 1000px;
   height: 150px;
+}
+#leo {
+  display: block;
+  float: left;
+  top: 0px;
+  background-image: url("../images/leo.png");
+  border: none;
+  position: absolute;
+  left: 910px;
+  background-size: 100% 100%;
+  width: 160px;
+  height: 160px;
 }
 
 .title {

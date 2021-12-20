@@ -28,6 +28,7 @@ module.exports = {
         index_grid: resolve(__dirname, './src/index_grid.js'),
         index_inline_block: resolve(__dirname, './src/index_inline_block.js'),
         leo: resolve(__dirname, './src/leo.js'),
+        carusel: resolve(__dirname, './src//slider/carusel.js'),
     },
     output: {
         filename: '[name].js',
