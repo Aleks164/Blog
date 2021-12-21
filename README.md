@@ -6,3 +6,5 @@
 - the fifth is a slider with pictures connected as a plugin
 
 On the page with the game and slider, clicking on the image allows you to return to the main page
+
+click here to see https://aleks164.github.io/Blog/
