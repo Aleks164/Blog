@@ -1,4 +1,3 @@
 dist
-src/cssStyles/sanitize.css
-src/cssStyles/html5doctor.css
-src/cssStyles/sanitize.css
+src/sassStyles/sanitize.css
+src/cssStyles_css

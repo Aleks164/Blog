@@ -1,49 +1,52 @@
-
-.carusel{
-	border: 11px solid transparent;
-  background-blend-mode: color; 
+.carusel {
+  border: 11px solid transparent;
+  background-blend-mode: color;
   border-image: url("../images/border2.png") 30 repeat;
-    position: relative;
-    display: inline-block;
-    
+  position: relative;
+  display: inline-block;
 }
-.slide{
-  position: absolute;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    width: 5%;
-    height: 25%;
-    color: rgb(64 47 47);;
-    text-align: center;
-    opacity: .5;
-    top: 50%;
-    transform: translate(0, -50%);
-    font-size: 600%;
-    font-weight: bold;
-    cursor: pointer;
-}
-.prev{
-left: 20px;
-}
-.prev:hover, .next:hover{
-  font-weight: bold;
-color: rgb(201 231 101);
 
+.slide {
+  position: absolute;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 5%;
+  height: 25%;
+  color: rgb(64 47 47);
+  text-align: center;
+  opacity: 0.5;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 600%;
+  font-weight: bold;
+  cursor: pointer;
 }
-.next{
-	right:  20px;
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  font-weight: bold;
+  color: rgb(201 231 101);
 }
 
 .carusel > img {
   display: none;
   height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-.slidebut{  
+
+.slidebut {
   font-size: 20px;
   cursor: pointer;
   left: 83%;
@@ -58,55 +61,50 @@ color: rgb(201 231 101);
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  background: #5D8EC7;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
+  background: #5d8ec7;
   transition: all 0.3s ease-in-out;
-  border: 4px rgb(211, 118, 118);
+  border: 4px rgb(211 118 118);
   border-style: inset;
 }
-.slidebut:hover{
+
+.slidebut:hover {
   transform: translateX(10px);
-  background: rgb(28, 29, 136);
+  background: rgb(28 29 136);
   color: azure;
 }
-#spanCont{
+
+#s-сont {
   display: flex;
-    max-width: 90%;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* cursor: pointer; */
-    left: 8.5%;
-    position: relative;
-    top: -8%;
-    /* display: block; */
-    height: 5%;
-    overflow: hidden;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: #FFF;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+  max-width: 90%;
+  left: 8.5%;
+  position: relative;
+  top: -8%;
+  height: 5%;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
-.item{
+.item {
   cursor: pointer;
-    background-color: #adc5db5c;
-    margin-left: 1px;
-    margin-right: 1px;
-    border: 1px solid #ffffff82;
-    
+  background-color: #adc5db5c;
+  margin-left: 1px;
+  margin-right: 1px;
+  border: 1px solid #ffffff82;
 }
-.item:hover{
+
+.item:hover {
   background-color: #f3d59d99;
 }
 
-.border{
-  border: 4px rgb(166, 231, 46);
+.border {
+  border: 4px rgb(166 231 46);
   border-style: inset;
+}
+
+.slidebut span {
+  color: rgb(0 255 98);
 }
