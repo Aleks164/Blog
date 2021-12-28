@@ -16,7 +16,7 @@ export function dinoF(listOfColorElements) {
       "a3",
       "a4",
       "a5",
-      "a6"
+      "a6",
     ];
     shuffle(aramColor2);
     listOfColorElements.forEach((item) => {

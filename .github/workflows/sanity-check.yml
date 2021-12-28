@@ -12,15 +12,15 @@ jobs:
       - name: Install Packages
         run: |
           npm install
-      - name: Lint check       
+      - name: Lint check
         run: |
           npm run lint
-          
+
       - name: Jest Test
         run: |
           # https://www.maketecheasier.com/run-bash-commands-background-linux/
           npm start &>/dev/null &
-          npm run test 
+          npm run test
 
       - name: Archive artifacts for style tests
         uses: actions/upload-artifact@v2

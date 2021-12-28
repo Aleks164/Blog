@@ -3,20 +3,16 @@ import "./carusel_style.css";
 
 (function () {
   function createCarusel() {
-
-
     const el = document.querySelector(".carusel");
     if (typeof Number(el.dataset.width) === "number") {
       el.style.width = `${el.dataset.width}px`;
-      console.log(el.style.width, "kk", el.dataset.width)
     }
     if (typeof Number(el.dataset.height) === "number") {
       el.style.height = `${el.dataset.height}px`;
-      console.log(el.style.height, "kk", el.dataset.height)
     }
     const line = el.dataset.showSliderLine;
     const slideShow = el.dataset.buttonSliderShow;
-    const { prevNext } = el.dataset;
+    let { prevNext } = el.dataset;
     const imgList = el.querySelectorAll("img");
     const arr = [];
     let i = 0;
@@ -31,25 +27,28 @@ import "./carusel_style.css";
     function nextB() {
       if (i + 1 > imgList.length - 1) {
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#adc5db5c";
+        }
         imgList[i].style.display = "none";
         i = 0;
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#f3d59d99";
+        }
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
-      }
-      else {
+      } else {
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#adc5db5c";
+        }
         imgList[i].style.display = "none";
         i += 1;
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#f3d59d99";
+        }
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
       }
@@ -57,25 +56,28 @@ import "./carusel_style.css";
     function prevB() {
       if (i - 1 < 0) {
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#adc5db5c";
+        }
         imgList[i].style.display = "none";
         i = imgList.length - 1;
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#f3d59d99";
+        }
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
-      }
-      else {
+      } else {
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#adc5db5c";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#adc5db5c";
+        }
         imgList[i].style.display = "none";
         i -= 1;
         if (line === "on") {
-          document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
-        };
+          document.querySelectorAll(".item")[i].style.backgroundColor =
+            "#f3d59d99";
+        }
         imgList[i].style.display = "block";
         el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
       }
@@ -91,11 +93,11 @@ import "./carusel_style.css";
       prev.addEventListener("click", prevB);
       el.appendChild(prev);
       el.appendChild(next);
-    };
+    }
 
     if (line === "on") {
       const imageSpanRow = document.createElement("div");
-      imageSpanRow.id = "s-cont";
+      imageSpanRow.id = "sCont";
       imgList.forEach((elem, index) => {
         const item = document.createElement("span");
         item.style.width = `${90 / imgList.length}%`;
@@ -120,16 +122,21 @@ import "./carusel_style.css";
     if (slideShow === "on") {
       const slide = document.createElement("span");
       slide.classList.add("slidebut");
-
       slide.innerHTML = "SlideShow";
       slide.addEventListener("click", () => {
         slide.classList.toggle("border");
+        const offPrew = document.querySelector(".prev");
+        const offNext = document.querySelector(".next");
 
         if (!intervalID) {
+          offPrew.style.visibility = "hidden";
+          offNext.style.visibility = "hidden";
           slide.innerHTML = "SlideShow <span>ON</span>";
           intervalID = setInterval(nextB, 2000);
-        }
-        else {
+        } else {
+          offPrew.style.visibility = "visible";
+          offNext.style.visibility = "visible";
+          prevNext = "on";
           slide.innerText = "SlideShow";
           clearInterval(intervalID);
           intervalID = null;
@@ -140,11 +147,7 @@ import "./carusel_style.css";
     document.querySelectorAll(".item")[i].style.backgroundColor = "#f3d59d99";
     imgList[i].style.display = "block";
     el.style.background = `url("${imgListArr[i]}") 0% 0% / 100% 100% no-repeat, rgba(255, 255, 255, 0.5)`;
-
-
-
   }
 
   window.addEventListener("load", createCarusel);
 })();
-

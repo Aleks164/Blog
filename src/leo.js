@@ -11,59 +11,58 @@ makeLayout(body);
 
 const containerForColorElements = document.getElementById("maindiv");
 
-let listOfColorElements = containerForColorElements.getElementsByClassName(
-	"buttons"
-);
+let listOfColorElements =
+  containerForColorElements.getElementsByClassName("buttons");
 
 const aramColor = [
-	"coral",
-	"blue",
-	"yellow",
-	"green",
-	"grey",
-	"AntiqueWhite",
-	"coral",
-	"blue",
-	"yellow",
-	"green",
-	"grey",
-	"AntiqueWhite"
+  "coral",
+  "blue",
+  "yellow",
+  "green",
+  "grey",
+  "AntiqueWhite",
+  "coral",
+  "blue",
+  "yellow",
+  "green",
+  "grey",
+  "AntiqueWhite",
 ];
 shuffle(aramColor);
 
 listOfColorElements = [...listOfColorElements];
 
 listOfColorElements.forEach((item) => {
-	item.style.backgroundColor = aramColor[listOfColorElements.indexOf(item)];
-	item.style.transition = "all 1s";
-	setTimeout(() => {
-		item.classList.add("temp1");
-		item.style.transition = "";
-	}, 2458);
+  item.style.backgroundColor = aramColor[listOfColorElements.indexOf(item)];
+  item.style.transition = "all 1s";
+  setTimeout(() => {
+    item.classList.add("temp1");
+    item.style.transition = "";
+  }, 2458);
 });
 
 const aramanim = [
-	"animate__fadeOutUp",
-	"animate__fadeOutTopLeft",
-	"animate__fadeOutTopRight",
-	"animate__fadeOutBottomRight",
-	"animate__fadeOutBottomLeft"
+  "animate__fadeOutUp",
+  "animate__fadeOutTopLeft",
+  "animate__fadeOutTopRight",
+  "animate__fadeOutBottomRight",
+  "animate__fadeOutBottomLeft",
 ];
 startF(aramColor, listOfColorElements);
 
 export function clickOnElment(button) {
-	clickOnElmentF(button);
+  clickOnElmentF(button);
 }
 export function start() {
-	startF(aramColor, listOfColorElements);
+  startF(aramColor, listOfColorElements);
 }
 export function dino() {
-	dinoF(listOfColorElements);
+  dinoF(listOfColorElements);
 }
 
 export function clickOnDinoElment(button) {
-	shuffle(aramanim);
-	clickOnDinoElmentF(button, aramanim);
+  shuffle(aramanim);
+  clickOnDinoElmentF(button, aramanim);
 }
 
 window.clickOnElment = clickOnElment;

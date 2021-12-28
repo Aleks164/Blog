@@ -4,42 +4,41 @@ import { toMatchImageSnapshot } from "jest-image-snapshot";
 expect.extend({ toMatchImageSnapshot });
 
 const sleep = async (x) =>
-    new Promise((resolve) => {
-        setTimeout(resolve, x);
-    });
+  new Promise((resolve) => {
+    setTimeout(resolve, x);
+  });
 
 describe("index_flex.test", () => {
-    // beforeEach(() => {
-    //     jest.setTimeout(30000);
-    // });
-    [
-        { width: 1920, height: 1080 },
-        { width: 675, height: 320 },
-        { width: 1024, height: 765 },
-        { width: 1400, height: 800 },
-    ].forEach(({ width, height }) =>
-        it(`view ${width}x${height} params`, async () => {
-            const browser = await puppeteer.launch();
-            const page = await browser.newPage();
-            await page.setViewport({ width, height });
-            await page.goto("http://localhost:9000/pages/index_flex.html", {
-                waitUntil: "networkidle0",
-            });
-            await sleep(3000);
+  // beforeEach(() => {
+  //     jest.setTimeout(30000);
+  // });
+  [
+    { width: 1920, height: 1080 },
+    { width: 675, height: 320 },
+    { width: 1024, height: 765 },
+    { width: 1400, height: 800 },
+  ].forEach(({ width, height }) =>
+    it(`view ${width}x${height} params`, async () => {
+      const browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.setViewport({ width, height });
+      await page.goto("http://localhost:9000/pages/index_flex.html", {
+        waitUntil: "networkidle0",
+      });
+      await sleep(3000);
 
-            const image = await page.screenshot();
-            await browser.close();
+      const image = await page.screenshot();
+      await browser.close();
 
-            // expect(image).toMatchImageSnapshot();
-            expect(image).toMatchImageSnapshot(
-                process.env.CI
-                    ? {
-                        failureThreshold: 0.1,
-                        failureThresholdType: "percent",
-                    }
-                    : undefined
-            );
-        })
-    );
-
+      // expect(image).toMatchImageSnapshot();
+      expect(image).toMatchImageSnapshot(
+        process.env.CI
+          ? {
+              failureThreshold: 0.1,
+              failureThresholdType: "percent",
+            }
+          : undefined
+      );
+    })
+  );
 });

@@ -10,7 +10,7 @@ describe("check click on color element", () => {
     "animate__fadeOutTopLeft",
     "animate__fadeOutTopRight",
     "animate__fadeOutBottomRight",
-    "animate__fadeOutBottomLeft"
+    "animate__fadeOutBottomLeft",
   ];
 
   beforeEach(() => {
@@ -34,19 +34,19 @@ describe("check click on color element", () => {
     clickOnDinoElmentF(getElem(0), aramanim);
     clickOnDinoElmentF(getElem(1), aramanim);
     expect(getElem(0).classList).toStrictEqual(
-      expect.objectContaining({ "2": "animate__fadeOutTopLeft" })
+      expect.objectContaining({ 2: "animate__fadeOutTopLeft" })
     );
     expect(getElem(1).classList).toStrictEqual(
-      expect.objectContaining({ "2": "animate__fadeOutTopRight" })
+      expect.objectContaining({ 2: "animate__fadeOutTopRight" })
     );
     await sleep(1300);
     expect(getElem(0).style.visibility).toEqual("hidden");
     expect(getElem(0).classList).not.toStrictEqual(
-      expect.objectContaining({ "2": "animate__fadeOutTopLeft" })
+      expect.objectContaining({ 2: "animate__fadeOutTopLeft" })
     );
     expect(getElem(1).style.visibility).toEqual("hidden");
     expect(getElem(1).classList).not.toStrictEqual(
-      expect.objectContaining({ "2": "animate__fadeOutTopRight" })
+      expect.objectContaining({ 2: "animate__fadeOutTopRight" })
     );
   });
   it("should compare two selected images and refresh both one if they is'nt the same", async () => {
@@ -58,19 +58,19 @@ describe("check click on color element", () => {
     clickOnDinoElmentF(getElem(0), aramanim);
     clickOnDinoElmentF(getElem(2), aramanim);
     expect(getElem(0).classList).not.toStrictEqual(
-      expect.objectContaining({ "2": "temp1" })
+      expect.objectContaining({ 2: "temp1" })
     );
     expect(getElem(2).classList).not.toStrictEqual(
-      expect.objectContaining({ "2": "temp1" })
+      expect.objectContaining({ 2: "temp1" })
     );
     await sleep(1300);
     expect(getElem(0).style.visibility).toEqual("visible");
     expect(getElem(0).classList).toStrictEqual(
-      expect.objectContaining({ "2": "temp1" })
+      expect.objectContaining({ 2: "temp1" })
     );
     expect(getElem(2).style.visibility).toEqual("visible");
     expect(getElem(2).classList).toStrictEqual(
-      expect.objectContaining({ "2": "temp1" })
+      expect.objectContaining({ 2: "temp1" })
     );
   });
   it("clicking on itself will not hide the element", async () => {
@@ -81,12 +81,12 @@ describe("check click on color element", () => {
     clickOnDinoElmentF(getElem(0), aramanim);
     clickOnDinoElmentF(getElem(0), aramanim);
     expect(getElem(0).classList).not.toStrictEqual(
-      expect.objectContaining({ "2": "temp1" })
+      expect.objectContaining({ 2: "temp1" })
     );
     await sleep(1300);
     expect(getElem(0).style.visibility).toEqual("visible");
     expect(getElem(0).classList).toStrictEqual(
-      expect.objectContaining({ "2": "temp1" })
+      expect.objectContaining({ 2: "temp1" })
     );
   });
 });

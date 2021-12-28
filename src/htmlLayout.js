@@ -97,5 +97,4 @@ export default function makeLayout(nav) {
     exercitationem deleniti hic tempora voluptatibus provident doloribus
     asperiores, voluptas?
   </p>`;
-
 }

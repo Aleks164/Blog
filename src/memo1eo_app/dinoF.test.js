@@ -19,7 +19,7 @@ describe("draw dino mode", () => {
     "a3",
     "a4",
     "a5",
-    "a6"
+    "a6",
   ];
   beforeEach(() => {
     el = document.createElement("div");
@@ -47,14 +47,18 @@ describe("draw dino mode", () => {
     expect(listOfColorElements.length).toEqual(12);
     expect(el.innerHTML).toStrictEqual(
       expect.stringContaining(
-        `<div onclick=\"clickOnElment(this)\" id="b${aramNumberOfElem + 1
-        }\" class=\"buttons ${aramColor2[aramNumberOfElem]
+        `<div onclick=\"clickOnElment(this)\" id="b${
+          aramNumberOfElem + 1
+        }\" class=\"buttons ${
+          aramColor2[aramNumberOfElem]
         }\" style=\"display: inline-block; visibility: visible; transition: all 2.5s;\"></div>`
       )
     );
     expect(aramString).toBe(
-      `<div onclick=\"clickOnElment(this)\" id="b${aramNumberOfElem + 1
-      }\" class=\"buttons ${aramColor2[aramNumberOfElem]
+      `<div onclick=\"clickOnElment(this)\" id="b${
+        aramNumberOfElem + 1
+      }\" class=\"buttons ${
+        aramColor2[aramNumberOfElem]
       }\" style=\"display: inline-block; visibility: visible; transition: all 2.5s;\"></div>`
     );
     await sleep(3100);

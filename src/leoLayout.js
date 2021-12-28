@@ -1,7 +1,7 @@
 export default function makeLayout() {
-    const body = document.querySelector("body");
+  const body = document.querySelector("body");
 
-    body.innerHTML = `<div class="titleleo">
+  body.innerHTML = `<div class="titleleo">
     <h4 class="title">Memo1eo</h4>
     <div onclick="start()" id="tryagain"><br>Leo
         <hr id="bthr"> Color
@@ -28,5 +28,5 @@ export default function makeLayout() {
     <div onclick="q(this)" id="b10" class="buttons "></div>
     <div onclick="q(this)" id="b11" class="buttons "></div>
     <div onclick="q(this)" id="b12" class="buttons "></div>
-</div>`
+</div>`;
 }

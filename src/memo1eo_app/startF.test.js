@@ -20,7 +20,7 @@ describe("draw color mode", () => {
     "yellow",
     "green",
     "grey",
-    "AntiqueWhite"
+    "AntiqueWhite",
   ];
 
   beforeEach(() => {
@@ -50,14 +50,18 @@ describe("draw color mode", () => {
     expect(listOfColorElements.length).toEqual(12);
     expect(el.innerHTML).toStrictEqual(
       expect.stringContaining(
-        `<div onclick=\"clickOnElment(this)\" id="b${aramNumberOfElem + 1
-        }\" class=\"buttons\" style=\"display: inline-block; visibility: visible; background-color: ${aramColor[aramNumberOfElem]
+        `<div onclick=\"clickOnElment(this)\" id="b${
+          aramNumberOfElem + 1
+        }\" class=\"buttons\" style=\"display: inline-block; visibility: visible; background-color: ${
+          aramColor[aramNumberOfElem]
         }; transition: all 1s;\"></div>`
       )
     );
     expect(aramString).toBe(
-      `<div onclick=\"clickOnElment(this)\" id="b${aramNumberOfElem + 1
-      }\" class=\"buttons\" style=\"display: inline-block; visibility: visible; background-color: ${aramColor[aramNumberOfElem]
+      `<div onclick=\"clickOnElment(this)\" id="b${
+        aramNumberOfElem + 1
+      }\" class=\"buttons\" style=\"display: inline-block; visibility: visible; background-color: ${
+        aramColor[aramNumberOfElem]
       }; transition: all 1s;\"></div>`
     );
     await sleep(3100);
