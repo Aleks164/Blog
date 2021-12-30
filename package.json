@@ -24,10 +24,8 @@
   },
   "homepage": "https://github.com/Aleks164/Blog#readme",
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.16.3",
-    "core-js": "^2.6.12",
-    "coverage": "^0.4.1",
-    "lodash": "^4.17.21"
+    "postcss": "^8.4.5",
+    "postcss-scss": "^4.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
@@ -35,11 +33,14 @@
     "@babel/node": "^7.16.0",
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.16.4",
+    "@babel/runtime-corejs3": "^7.16.3",
     "@types/jest": "^27.0.2",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.7",
     "browser-sync-webpack-plugin": "^2.3.0",
+    "core-js": "^2.6.12",
+    "coverage": "^0.4.1",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
     "cssnano": "^5.0.12",
@@ -55,6 +56,7 @@
     "jest": "^27.3.1",
     "jest-image-snapshot": "^4.5.1",
     "lint-staged": "11.2.5",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.5",
     "nodemon": "^2.0.15",
     "postcss-import": "^14.0.2",
@@ -73,7 +75,7 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.{js,css,md,html,yml}": "prettier --write",
-    "*.css": "stylelint --fix"
+    "*.{js,sass,md,html,yml}": "prettier --write",
+    "*.sass": "stylelint --fix"
   }
 }
