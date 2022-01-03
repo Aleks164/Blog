@@ -7,7 +7,6 @@
     "scss/selector-no-redundant-nesting-selector": null,
     "max-nesting-depth": 3,
     "selector-max-id": null,
-    "indentation": "tab",
     "number-leading-zero": null,
     "selector-class-pattern": null,
     "declaration-block-no-redundant-longhand-properties": null,

@@ -1,184 +1,184 @@
 html {
-	width: 1050px;
+  width: 1050px;
 }
 
 body {
-	background-color: #f4e1d2;
+  background-color: #f4e1d2;
 }
 
 #leo {
-	background-image: url('../images/leo.png');
-	background-size: 100% 100%;
-	// border: none;
-	display: block;
-	float: left;
-	height: 160px;
-	left: 910px;
-	position: absolute;
-	top: -5px;
-	width: 160px;
+  background-image: url('../images/leo.png');
+  background-size: 100% 100%;
+  // border: none;
+  display: block;
+  float: left;
+  height: 160px;
+  left: 910px;
+  position: absolute;
+  top: -5px;
+  width: 160px;
 }
 
 .maindiv {
-	background-color: #fefbd8;
-	display: block;
-	float: left;
-	height: 790px;
-	width: 1050px;
+  background-color: #fefbd8;
+  display: block;
+  float: left;
+  height: 790px;
+  width: 1050px;
 
-	& > div {
-		&.buttons {
-			background-size: 100% 100%;
-			border: 10px solid transparent;
-			border-image: url('../images/border2.png') 30 repeat;
-			display: inline-block;
-			height: 200px;
-			margin: 15px;
-			position: relative;
-			width: 200px;
-			z-index: 50;
-		}
-	}
+  & > div {
+    &.buttons {
+      background-size: 100% 100%;
+      border: 10px solid transparent;
+      border-image: url('../images/border2.png') 30 repeat;
+      display: inline-block;
+      height: 200px;
+      margin: 15px;
+      position: relative;
+      width: 200px;
+      z-index: 50;
+    }
+  }
 }
 
 .titleleo {
-	display: block;
-	height: 150px;
-	width: 1000px;
+  display: block;
+  height: 150px;
+  width: 1000px;
 
-	& > div {
-		display: block;
-		float: left;
-		margin: 15px;
-	}
+  & > div {
+    display: block;
+    float: left;
+    margin: 15px;
+  }
 }
 
 .title {
-	color: #ffa500;
-	display: block;
-	float: left;
-	font-family: Papyrus, sans-serif;
-	font-size: 100px;
-	margin: 1px;
-	padding-left: 15px;
-	text-align: left;
-	width: 56%;
+  color: #ffa500;
+  display: block;
+  float: left;
+  font-family: Papyrus, sans-serif;
+  font-size: 100px;
+  margin: 1px;
+  padding-left: 15px;
+  text-align: left;
+  width: 56%;
 }
 
 #hr1 {
-	background-color: #ffa500;
-	border-width: 0;
-	float: left;
-	height: 4px;
-	width: 1050px;
+  background-color: #ffa500;
+  border-width: 0;
+  float: left;
+  height: 4px;
+  width: 1050px;
 }
 
 .hrd1 {
-	display: block;
-	float: left;
-	margin: 4px;
-	width: 1050px;
+  display: block;
+  float: left;
+  margin: 4px;
+  width: 1050px;
 }
 
 .a1 {
-	background-image: url('../images/litlefoot.jpg');
+  background-image: url('../images/litlefoot.jpg');
 }
 
 .a2 {
-	background-image: url('../images/ptero.jpg');
+  background-image: url('../images/ptero.jpg');
 }
 
 .a3 {
-	background-image: url('../images/tricer.jpg');
+  background-image: url('../images/tricer.jpg');
 }
 
 .a4 {
-	background-image: url('../images/tyni.png');
+  background-image: url('../images/tyni.png');
 }
 
 .a5 {
-	background-image: url('../images/wisedino.jpg');
+  background-image: url('../images/wisedino.jpg');
 }
 
 .a6 {
-	background-image: url('../images/rex.jpg');
+  background-image: url('../images/rex.jpg');
 }
 
 #tryagain {
-	background-color: rgb(255 77 136);
-	border: 4px solid #008000;
-	border-radius: 65px;
-	color: #fff;
-	cursor: pointer;
-	font-family: Papyrus, sans-serif;
-	font-size: 25px;
-	font-weight: 990;
-	grid-column: 5;
-	grid-row: 2;
-	height: 116px;
-	line-height: 0.8;
-	position: relative;
-	text-align: center;
-	width: 116px;
+  background-color: rgb(255 77 136);
+  border: 4px solid #008000;
+  border-radius: 65px;
+  color: #fff;
+  cursor: pointer;
+  font-family: Papyrus, sans-serif;
+  font-size: 25px;
+  font-weight: 990;
+  grid-column: 5;
+  grid-row: 2;
+  height: 116px;
+  line-height: 0.8;
+  position: relative;
+  text-align: center;
+  width: 116px;
 }
 
 #dino {
-	background-color: rgb(64 191 64);
-	border: 4px solid hsl(60, 100%, 50%);
-	border-radius: 65px;
-	color: #fff;
-	cursor: pointer;
-	font-family: Papyrus, sans-serif;
-	font-size: 25px;
-	font-weight: 990;
-	grid-column: 5;
-	grid-row: 1;
-	height: 116px;
-	line-height: 0.8;
-	margin-left: 20px;
-	position: relative;
-	text-align: center;
-	width: 116px;
+  background-color: rgb(64 191 64);
+  border: 4px solid hsl(60, 100%, 50%);
+  border-radius: 65px;
+  color: #fff;
+  cursor: pointer;
+  font-family: Papyrus, sans-serif;
+  font-size: 25px;
+  font-weight: 990;
+  grid-column: 5;
+  grid-row: 1;
+  height: 116px;
+  line-height: 0.8;
+  margin-left: 20px;
+  position: relative;
+  text-align: center;
+  width: 116px;
 }
 
 #dino:hover,
 #tryagain:hover {
-	box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
-	transition: all 0.7s;
+  box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
+  transition: all 0.7s;
 }
 
 #bthr {
-	background-color: #008000;
-	height: 5px;
-	z-index: -1;
+  background-color: #008000;
+  height: 5px;
+  z-index: -1;
 }
 
 .temp1 {
-	background-image: url('../images/leo&turt.jpg');
-	background-size: 100% 100%;
-	z-index: 100;
+  background-image: url('../images/leo&turt.jpg');
+  background-size: 100% 100%;
+  z-index: 100;
 }
 
 .animate__rollOut {
-	animation-duration: 1.2s;
+  animation-duration: 1.2s;
 }
 
 .animate__fadeOutUp {
-	animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 .animate__fadeOutTopLeft {
-	animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 .animate__fadeOutTopRight {
-	animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 .animate__fadeOutBottomRight {
-	animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 .animate__fadeOutBottomLeft {
-	animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }

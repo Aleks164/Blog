@@ -1,110 +1,110 @@
 .carusel {
-	background-blend-mode: color;
-	border: 11px solid transparent;
-	border-image: url('../images/border2.png') 30 repeat;
-	display: inline-block;
-	position: relative;
+  background-blend-mode: color;
+  border: 11px solid transparent;
+  border-image: url('../images/border2.png') 30 repeat;
+  display: inline-block;
+  position: relative;
 }
 
 .slide {
-	align-items: center;
-	-webkit-box-align: center;
-	-webkit-box-pack: center;
-	color: rgb(64 47 47);
-	cursor: pointer;
-	display: flex;
-	font-size: 600%;
-	font-weight: bold;
-	height: 25%;
-	justify-content: center;
-	opacity: 0.5;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	transform: translate(0, -50%);
-	width: 5%;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  color: rgb(64 47 47);
+  cursor: pointer;
+  display: flex;
+  font-size: 600%;
+  font-weight: bold;
+  height: 25%;
+  justify-content: center;
+  opacity: 0.5;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 5%;
 }
 
 .prev {
-	left: 20px;
+  left: 20px;
 }
 
 .next {
-	right: 20px;
+  right: 20px;
 }
 
 .prev:hover,
 .next:hover {
-	color: rgb(201 231 101);
-	font-weight: bold;
+  color: rgb(201 231 101);
+  font-weight: bold;
 }
 
 .carusel > img {
-	display: none;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
+  display: none;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slidebut {
-	background: #5d8ec7;
-	border: 4px rgb(211 118 118);
-	border-style: inset;
-	cursor: pointer;
-	display: block;
-	font-size: 20px;
-	font-weight: bold;
-	height: 50px;
-	left: 83%;
-	line-height: 50px;
-	margin: 0 auto;
-	overflow: hidden;
-	position: absolute;
-	text-align: center;
-	text-decoration: none;
-	top: 2%;
-	transition: all 0.3s ease-in-out;
-	width: 15%;
+  background: #5d8ec7;
+  border: 4px rgb(211 118 118);
+  border-style: inset;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  height: 50px;
+  left: 83%;
+  line-height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 2%;
+  transition: all 0.3s ease-in-out;
+  width: 15%;
 }
 
 .slidebut:hover {
-	background: rgb(28 29 136);
-	color: #f0ffff;
-	transform: translateX(10px);
+  background: rgb(28 29 136);
+  color: #f0ffff;
+  transform: translateX(10px);
 }
 
 .sCont {
-	color: #fff;
-	display: flex;
-	font-weight: bold;
-	height: 5%;
-	left: 8.5%;
-	max-width: 90%;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	text-decoration: none;
-	top: -8%;
-	transition: all 0.3s ease-in-out;
+  color: #fff;
+  display: flex;
+  font-weight: bold;
+  height: 5%;
+  left: 8.5%;
+  max-width: 90%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top: -8%;
+  transition: all 0.3s ease-in-out;
 }
 
 .item {
-	background-color: #adc5db5c;
-	border: 1px solid #ffffff82;
-	cursor: pointer;
-	margin-left: 1px;
-	margin-right: 1px;
+  background-color: #adc5db5c;
+  border: 1px solid #ffffff82;
+  cursor: pointer;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 .item:hover {
-	background-color: #f3d59d99;
+  background-color: #f3d59d99;
 }
 
 .border {
-	border: 4px rgb(166 231 46);
-	border-style: inset;
+  border: 4px rgb(166 231 46);
+  border-style: inset;
 }
 
 .slidebut span {
-	color: rgb(0 255 98);
+  color: rgb(0 255 98);
 }
