@@ -19,7 +19,7 @@ describe("layout test", () => {
     );
     expect(el.innerHTML).toStrictEqual(
       expect.stringContaining(
-        '<div onclick="clickOnElment(this)" id="b12" class="buttons "></div>'
+        ' <div id=\"b12\" class=\"buttons \"></div>'
       )
     );
   });

@@ -46,19 +46,14 @@ describe("draw dino mode", () => {
     aramString = aramString.outerHTML;
     expect(listOfColorElements.length).toEqual(12);
     expect(el.innerHTML).toStrictEqual(
-      expect.stringContaining(
-        `<div onclick=\"clickOnElment(this)\" id="b${
-          aramNumberOfElem + 1
-        }\" class=\"buttons ${
-          aramColor2[aramNumberOfElem]
+      expect.stringContaining(`<div id="b${aramNumberOfElem + 1
+        }\" class=\"buttons ${aramColor2[aramNumberOfElem]
         }\" style=\"display: inline-block; visibility: visible; transition: all 2.5s;\"></div>`
       )
     );
     expect(aramString).toBe(
-      `<div onclick=\"clickOnElment(this)\" id="b${
-        aramNumberOfElem + 1
-      }\" class=\"buttons ${
-        aramColor2[aramNumberOfElem]
+      `<div id="b${aramNumberOfElem + 1
+      }\" class=\"buttons ${aramColor2[aramNumberOfElem]
       }\" style=\"display: inline-block; visibility: visible; transition: all 2.5s;\"></div>`
     );
     await sleep(3100);
