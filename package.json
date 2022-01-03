@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --silent --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"\n",
-    "lint": "eslint src && prettier --check . && stylelint \"**/*.css\" && stylelint \"**/*.scss\"",
+    "lint": "eslint src && prettier --write . && prettier --check . && stylelint \"**/*.css\" && stylelint \"**/*.scss\"",
     "lint:fix": "eslint src --fix  && prettier --write . && stylelint \"**/*.css\" --fix && stylelint \"**/*.scss\" --fix",
     "prepare": "husky install",
     "build": "webpack build --node-env production",
