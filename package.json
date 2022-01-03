@@ -1,64 +1,83 @@
 {
   "name": "newproj",
   "version": "1.0.0",
-  "description": "2try",
-  "main": "index.js",
+  "description": "posishioning",
   "scripts": {
     "test": "jest",
     "coverage": "jest --silent --coverage --coverageReporters=\"text\" --coverageReporters=\"text-summary\"\n",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
+    "lint": "eslint src && prettier --write . && prettier --check . && stylelint \"**/*.css\" && stylelint \"**/*.scss\"",
+    "lint:fix": "eslint src --fix  && prettier --write . && stylelint \"**/*.css\" --fix && stylelint \"**/*.scss\" --fix",
     "prepare": "husky install",
     "build": "webpack build --node-env production",
-    "dev": "webpack serve --open"
+    "dev": "webpack serve --open",
+    "start": "webpack serve --mode development",
+    "v": "node -v"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aleks164/Weather_app.git"
+    "url": "git+https://github.com/Aleks164/Blog.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Aleks164/Weather_app/issues"
+    "url": "https://github.com/Aleks164/Blog/issues"
   },
-  "homepage": "https://github.com/Aleks164/Weather_app#readme",
-  "dependencies": {
-    "@babel/runtime-corejs3": "^7.16.3",
-    "core-js": "^2.6.12",
-    "coverage": "^0.4.1",
-    "lodash": "^4.17.21"
-  },
+  "homepage": "https://github.com/Aleks164/Blog#readme",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/node": "^7.16.0",
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.16.4",
+    "@babel/runtime-corejs3": "^7.16.3",
     "@types/jest": "^27.0.2",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "core-js": "^2.6.12",
+    "coverage": "^0.4.1",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
+    "cssnano": "^5.0.12",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jest": "^25.2.2",
+    "glob": "^7.1.6",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
     "jest": "^27.3.1",
+    "jest-image-snapshot": "^4.5.1",
     "lint-staged": "11.2.5",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.5",
     "nodemon": "^2.0.15",
-    "prettier": "2.4.1",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.0.1",
+    "prettier": "^2.4.1",
+    "puppeteer": "^13.0.0",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^14.2.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.1.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.6.0"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.{js,css,md,html,yml}": "prettier --write"
+    "*.{js,scss,css,md,html,yml}": "prettier --write",
+    "*.scss": "stylelint --fix"
   }
 }

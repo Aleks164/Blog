@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f5f5f0;
+  margin: auto;
+  width: 1038px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 1020px;
+}
+
+footer {
+  background-color: rgb(255 204 153 / 30%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  order: 3;
+
+  p {
+    font-size: 18px;
+    line-height: 1.73;
+    margin-right: 30px;
+    margin-top: 10px;
+    padding-left: 35px;
+    text-align: justify;
+  }
+}
+
+#leftblock {
+  order: 1;
+  width: 24%;
+
+  p {
+    font-size: 18px;
+    line-height: 1.73;
+    margin-bottom: 54px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+  }
+}
+
+#midblock {
+  flex-grow: 2;
+  order: 2;
+  padding-top: 10px;
+  width: 52%;
+
+  p {
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  h1 {
+    font-size: 35px;
+    margin-bottom: 26px;
+    margin-top: 25px;
+
+    &:nth-child(1) {
+      margin-top: 15px;
+    }
+  }
+
+  article {
+    margin-bottom: 68px;
+    padding-left: 35px;
+    padding-right: 60px;
+  }
+}
+
+#rigthblock {
+  order: 3;
+  width: 24%;
+
+  p {
+    font-size: 18px;
+    line-height: 1.73;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+  }
+}
+
+#head {
+  background-color: rgb(255 204 153 / 30%);
+  display: flex;
+  flex-flow: row wrap;
+  height: 247px;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 15px;
+  order: 1;
+  padding-left: 0;
+}
+
+nav {
+  order: 2;
+  width: 460px;
+
+  span {
+    background-color: #ffebcd;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    display: block;
+    font-size: 20px;
+    margin: 21px;
+    margin-left: 21px;
+    margin-left: 25px;
+    text-align: center;
+
+    &:hover {
+      background-color: rgb(240 178 80);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#img {
+  background-image: url("../images/happy.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 13px;
+  height: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  order: 1;
+  width: 410px;
+}
+
+main {
+  column-gap: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 1085px;
+  margin-left: 10px;
+  margin-right: 10px;
+  order: 2;
+}
+
+#leftblock,
+#midblock,
+#rigthblock {
+  background-color: rgb(255 204 153 / 30%);
+}

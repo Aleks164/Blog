@@ -1,0 +1,51 @@
+html {
+  width: 1050px;
+}
+
+body {
+  background-color: #fefbd8;
+}
+
+.titleleo {
+  display: block;
+  height: 150px;
+  width: 1000px;
+}
+
+#leo {
+  background-image: url("../images/leo.png");
+  background-size: 100% 100%;
+  // border: none;
+  display: block;
+  float: left;
+  height: 160px;
+  left: 910px;
+  position: absolute;
+  top: 0;
+  width: 160px;
+}
+
+.title {
+  color: #ffa500;
+  display: block;
+  font-family: Papyrus, sans-serif;
+  font-size: 100px;
+  margin: 1px;
+  padding-left: 15px;
+  text-align: left;
+}
+
+#hr1 {
+  background-color: #ffa500;
+  border-width: 0;
+  float: left;
+  height: 4px;
+  width: 1050px;
+}
+
+.hrd1 {
+  display: block;
+  float: left;
+  margin: 4px;
+  width: 1050px;
+}
