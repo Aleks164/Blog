@@ -1,5 +1,5 @@
 import makeLayout from "./htmlLayout";
-import "./sassStyles/styles.sass";
+import "./sassStyles/styles.scss";
 
 const nav = `<a href="./index_grid.html"><span>GRID</span></a>
 <a href="./index_flex.html"><span>FLEX</span></a>

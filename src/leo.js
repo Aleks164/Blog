@@ -4,7 +4,7 @@ import clickOnElmentF from "./memo1eo_app/clickOnElmentF";
 import { startF } from "./memo1eo_app/startF";
 import { dinoF } from "./memo1eo_app/dinoF";
 import clickOnDinoElmentF from "./memo1eo_app/clickOnDinoElmentF";
-import "./sassStyles/leo.sass";
+import "./sassStyles/leo.scss";
 
 const body = document.querySelector("body");
 makeLayout(body);

@@ -1,4 +1,4 @@
-import "../sassStyles/dino_image_style.sass";
+import "../sassStyles/dino_image_style.scss";
 import "./carusel_style.css";
 
 (function () {
@@ -97,7 +97,7 @@ import "./carusel_style.css";
 
     if (line === "on") {
       const imageSpanRow = document.createElement("div");
-      imageSpanRow.id = "sCont";
+      imageSpanRow.classList.add("sCont");
       imgList.forEach((elem, index) => {
         const item = document.createElement("span");
         item.style.width = `${90 / imgList.length}%`;

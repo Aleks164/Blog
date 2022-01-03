@@ -1,0 +1,165 @@
+* {
+	box-sizing: border-box;
+}
+
+#head {
+	background-color: rgb(255 204 153 / 30%);
+	display: grid;
+	grid-area: header;
+	grid-template-areas: 'img nav';
+	grid-template-columns: 43.5vw auto;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+main {
+	column-gap: 1.8vw;
+	display: grid;
+	grid-area: main;
+	grid-template-areas: 'leftblock midblock rigthblock';
+	grid-template-columns: 21.5vw 48vw 21.5vw;
+	margin-left: 1vw;
+}
+
+footer {
+	background-color: rgb(255 204 153 / 30%);
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(4, 25%);
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-top: 1vw;
+
+	p {
+		font-size: 1.7vw;
+		line-height: 1.75;
+		padding-left: 3vw;
+		padding-right: 3.5vw;
+		text-align: justify;
+	}
+}
+
+#item-a {
+	grid-column: 1/2;
+	grid-row: 1 / 2;
+}
+
+#item-d {
+	grid-column: 4/5;
+	grid-row: 1 / 2;
+}
+
+#container {
+	display: grid;
+	gap: 1vw;
+	grid-template-areas: 'header' 'main';
+	grid-template-rows: 25vw 104vw;
+}
+
+#img {
+	background-image: url('../images/happy.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 13px;
+	grid-area: img;
+	grid-column: 1 / 2;
+	grid-row: 1/ 2;
+	height: 85%;
+	place-self: center;
+	width: 88%;
+}
+
+nav {
+	grid-area: nav;
+	grid-column: 2/ 3;
+	grid-row: 1/ 2;
+	height: 85%;
+	width: 92%;
+
+	span {
+		background-color: #ffebcd;
+		border: 1px solid #808080;
+		border-radius: 5px;
+		display: block;
+		font-size: 2vw;
+		height: 13%;
+		margin-top: 4%;
+		text-align: center;
+		width: 85%;
+
+		&:nth-child(1) {
+			margin-top: 6%;
+		}
+
+		&:hover {
+			background-color: rgb(240 178 80);
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+#leftblock {
+	grid-area: leftblock;
+	grid-column: 1/ 2;
+	grid-row: 1/ 2;
+	padding-left: 2vw;
+	padding-right: 2vw;
+
+	p {
+		font-size: 1.7vw;
+		line-height: 1.75;
+		margin-bottom: 5vw;
+		margin-top: 2.5vw;
+		text-align: justify;
+	}
+}
+
+#midblock {
+	grid-area: midblock;
+	grid-column: 2/ 3;
+	grid-row: 1/ 2;
+	padding-left: 1vw;
+
+	p {
+		font-size: 1.7vw;
+		line-height: 1.75;
+		padding-top: 0;
+		text-align: justify;
+	}
+
+	h1 {
+		font-size: 3vw;
+		margin-bottom: 2.5vw;
+	}
+
+	article {
+		margin-bottom: 6.5vw;
+		padding-left: 2vw;
+		padding-right: 6vw;
+	}
+}
+
+#rigthblock {
+	grid-area: rigthblock;
+	grid-column: 3/ 4;
+	grid-row: 1/ 2;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 0.5vw;
+
+	p {
+		font-size: 1.7vw;
+		line-height: 1.73;
+		margin-top: 1vw;
+		text-align: justify;
+	}
+}
+
+#leftblock,
+#midblock,
+#rigthblock {
+	background-color: rgb(255 204 153 / 30%);
+}
