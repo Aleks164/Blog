@@ -7,7 +7,7 @@ body {
 }
 
 #leo {
-  background-image: url('../images/leo.png');
+  background-image: url("../images/leo.png");
   background-size: 100% 100%;
   // border: none;
   display: block;
@@ -30,7 +30,7 @@ body {
     &.buttons {
       background-size: 100% 100%;
       border: 10px solid transparent;
-      border-image: url('../images/border2.png') 30 repeat;
+      border-image: url("../images/border2.png") 30 repeat;
       display: inline-block;
       height: 200px;
       margin: 15px;
@@ -81,27 +81,27 @@ body {
 }
 
 .a1 {
-  background-image: url('../images/litlefoot.jpg');
+  background-image: url("../images/litlefoot.jpg");
 }
 
 .a2 {
-  background-image: url('../images/ptero.jpg');
+  background-image: url("../images/ptero.jpg");
 }
 
 .a3 {
-  background-image: url('../images/tricer.jpg');
+  background-image: url("../images/tricer.jpg");
 }
 
 .a4 {
-  background-image: url('../images/tyni.png');
+  background-image: url("../images/tyni.png");
 }
 
 .a5 {
-  background-image: url('../images/wisedino.jpg');
+  background-image: url("../images/wisedino.jpg");
 }
 
 .a6 {
-  background-image: url('../images/rex.jpg');
+  background-image: url("../images/rex.jpg");
 }
 
 #tryagain {
@@ -154,7 +154,7 @@ body {
 }
 
 .temp1 {
-  background-image: url('../images/leo&turt.jpg');
+  background-image: url("../images/leo&turt.jpg");
   background-size: 100% 100%;
   z-index: 100;
 }

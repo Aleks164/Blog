@@ -6,7 +6,7 @@
   background-color: rgb(255 204 153 / 30%);
   display: grid;
   grid-area: header;
-  grid-template-areas: 'img nav';
+  grid-template-areas: "img nav";
   grid-template-columns: 43.5vw auto;
   margin-left: 1vw;
   margin-right: 1vw;
@@ -16,7 +16,7 @@ main {
   column-gap: 1.8vw;
   display: grid;
   grid-area: main;
-  grid-template-areas: 'leftblock midblock rigthblock';
+  grid-template-areas: "leftblock midblock rigthblock";
   grid-template-columns: 21.5vw 48vw 21.5vw;
   margin-left: 1vw;
 }
@@ -52,12 +52,12 @@ footer {
 #container {
   display: grid;
   gap: 1vw;
-  grid-template-areas: 'header' 'main';
+  grid-template-areas: "header" "main";
   grid-template-rows: 25vw 104vw;
 }
 
 #img {
-  background-image: url('../images/happy.jpeg');
+  background-image: url("../images/happy.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 13px;

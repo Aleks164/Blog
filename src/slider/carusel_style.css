@@ -1,7 +1,7 @@
 .carusel {
   background-blend-mode: color;
   border: 11px solid transparent;
-  border-image: url('../images/border2.png') 30 repeat;
+  border-image: url("../images/border2.png") 30 repeat;
   display: inline-block;
   position: relative;
 }
